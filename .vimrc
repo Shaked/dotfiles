@@ -6,9 +6,13 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
-" packages
 " themes
 Bundle 'flazz/vim-colorschemes'
+
+" Load VIM files 
+source ~/vim/vimrc/keybind.vim
+
+" packages
 " lang support
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'plasticboy/vim-markdown'
@@ -68,24 +72,6 @@ set relativenumber
 set ruler
 " set spell spelllang=en_us
 
-" keyboard mapping
-inoremap jk <ESC>
-let mapleader = ","
-
- " Spelling 
-nnoremap <leader>f 1z=
-nnoremap <leader>s :set spell!
-
- " Arrows are unvimlike 
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
 " Filetype settings
 autocmd BufNewFile,BufRead,BufWritePost *.md set filetype=markdown
 autocmd BufNewFile,BufRead,BufWritePost *.swig set filetype=django
@@ -137,3 +123,4 @@ let g:syntastic_html_checkers=[]
 let g:syntastic_php_checkers=['php']
 let g:syntastic_scss_checkers=[]
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
