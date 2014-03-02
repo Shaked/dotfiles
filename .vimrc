@@ -9,7 +9,7 @@ Bundle 'gmarik/vundle'
 " themes
 Bundle 'flazz/vim-colorschemes'
 
-" Load VIM files 
+" Load VIM files
 source ~/vim/vimrc/keybind.vim
 
 " packages
@@ -21,7 +21,7 @@ Bundle 'scrooloose/syntastic'
 " text editing tools
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround' 
+Bundle 'tpope/vim-surround'
 Bundle 'MarcWeber/ultisnips'
 Bundle 'honza/vim-snippets'
 " version control
@@ -46,8 +46,8 @@ Bundle 'embear/vim-localvimrc'
 " markdown nofolding
 let g:vim_markdown_folding_disabled=1
 
-" golang settings 
-set rtp+=$GOROOT/misc/vim 
+" golang settings
+set rtp+=$GOROOT/misc/vim
 
 " Basic settings
 filetype plugin indent on
@@ -66,8 +66,8 @@ set encoding=utf-8
 " Visual Aids
 set guicursor=n-v-c:hor5-Cursor
 set cursorline
+set listchars=tab:▸\ ,trail:¬
 set list
-set list listchars="tab:\»\ ,trail:·"
 set relativenumber
 set ruler
 " set spell spelllang=en_us
@@ -123,4 +123,6 @@ let g:syntastic_html_checkers=[]
 let g:syntastic_php_checkers=['php']
 let g:syntastic_scss_checkers=[]
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:airline#extensions#tabline#enabled = 1
+
 

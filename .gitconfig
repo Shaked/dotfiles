@@ -11,3 +11,5 @@
 	default = matching
 [core]
 	editor = /usr/bin/vim
+[color]
+	ui = true
