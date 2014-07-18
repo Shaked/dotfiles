@@ -1,0 +1,3 @@
+function search_for {
+	git grep -ni "$1" || (echo "Git failed, trying string scan"; grep -RHin "$1" * | grep -iv svn)
+}

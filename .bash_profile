@@ -1,9 +1,8 @@
-
 PATHSFILE=$HOME/.profile/.paths;
 test -f $PATHSFILE && source $PATHSFILE
 
-# functions
-source $HOME/funcs/.funcs
+FUNCSFILE=$HOME/.profile/.funcs;
+test -f $FUNCSFILE && source $FUNCSFILE
 
 # language 
 export LC_ALL=en_US.UTF-8
@@ -24,4 +23,4 @@ parse_git_branch() {
 export PS1="\u@mac \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # defaults
-export EDITOR=/usr/bin/vim
+export EDITOR=`which vim`

@@ -1,0 +1,9 @@
+DIR_FUNCS=$HOME/funcs
+for filename in $DIR_FUNCS/.*; do 
+	if [ $filename == "$DIR_FUNCS/." ] || [ $filename == "$DIR_FUNCS/.." ]
+	then
+		continue
+	else
+		source "$DIR/$filename"
+	fi
+done 
