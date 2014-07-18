@@ -1,4 +1,15 @@
-dotfiles
+My . files 
 ========
 
-My .dotfiles 
+### Usage 
+```
+$ sh setup.php 
+```
+
+### Includes 
+
+- vim 
+- git
+- user (bash) profile settings
+
+
