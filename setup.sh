@@ -1,4 +1,9 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# Functions 
+echo "Setting up custom functions..."
+ln -sf "${DIR}/funcs" $HOME/funcs 
+source $HOME/funcs/.funcs
+
 # Vim
 echo "Setting up vim..."
 ln -sf "${DIR}/.vimrc" $HOME/.vimrc

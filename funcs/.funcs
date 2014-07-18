@@ -1,0 +1,13 @@
+function search_for {
+	git grep -ni "$1" || (echo "Git failed, trying string scan"; grep -RHin "$1" * | grep -iv svn)
+}
+
+function lint_commit {
+	git status | grep -i ':' | egrep -iv "(Changes to be committed|Untracked)" | awk -F ':' '{ print $2 }' | while read line; do
+		if [ "" == "$line" ];
+		then
+			continue;
+		fi;
+		echo $line; (php -l "$line") || exit 0;
+	done;
+}
