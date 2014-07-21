@@ -3,7 +3,7 @@ My . files
 
 ### Usage 
 ```
-$ sh setup.php 
+$ sh setup.sh 
 ```
 
 ### Includes 
@@ -11,5 +11,6 @@ $ sh setup.php
 - vim 
 - git
 - user (bash) profile settings
+- custom shell functions
 
 
