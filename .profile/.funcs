@@ -4,6 +4,6 @@ for filename in $DIR_FUNCS/.*; do
 	then
 		continue
 	else
-		source "$DIR/$filename"
+		source "$filename"
 	fi
 done 

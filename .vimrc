@@ -1,8 +1,8 @@
 " Vundle conf
 set nocompatible              " be iMproved, required
 filetype off    " required
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
@@ -26,12 +26,10 @@ Bundle 'MarcWeber/ultisnips'
 Bundle 'honza/vim-snippets'
 " version control
 Bundle 'tpope/vim-fugitive'
-Bundle 'mhinz/vim-signify'
 " navigation, search, GUI
 Bundle 'bling/vim-airline'
 Bundle 'ZoomWin'
 " version control
-Bundle 'tpope/vim-fugitive'
 Bundle 'mhinz/vim-signify'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
@@ -42,6 +40,7 @@ Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 Bundle 'embear/vim-localvimrc'
 
+call vundle#end()
 " packages settings
 " markdown nofolding
 let g:vim_markdown_folding_disabled=1
