@@ -1,5 +1,16 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DIR_FUNCS=./funcs
+
+# brew installations 
+brew install mackup
+brew install wget
+
+# mackup
+ln -sf "${DIR}/.mackup" $HOME/.mackup 
+ln -sf "${DIR}/.mackup.cfg" $HOME/.mackup.cfg 
+mackup restore
+
+
 # Functions 
 echo "Setting up custom functions..."
 ln -sf "${DIR}/funcs" $HOME/funcs
