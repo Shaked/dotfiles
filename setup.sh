@@ -18,30 +18,30 @@ brew install phpunit
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 
 # mackup
-ln -sf "${DIR}/.mackup" $HOME/.mackup 
-ln -sf "${DIR}/.mackup.cfg" $HOME/.mackup.cfg 
+ln -sF "${DIR}/.mackup" $HOME/.mackup 
+ln -sF "${DIR}/.mackup.cfg" $HOME/.mackup.cfg 
 mackup restore
 
 
 # Functions 
-echo "Setting up custom functions..."	
-ln -sf "${DIR}/funcs" $HOME/funcs
-ln -sf "${DIR}/.profile" $HOME/.profile
+echo "Setting up custom functions..."
+ln -sF "${DIR}/funcs" $HOME/funcs
+ln -sF "${DIR}/.profile" $HOME/.profile
 
 # Vim
 echo "Setting up vim..."
-ln -sf "${DIR}/.vimrc" $HOME/.vimrc
-ln -sf "${DIR}/vim" $HOME/vim
+ln -sF "${DIR}/.vimrc" $HOME/.vimrc
+ln -sF "${DIR}/vim" $HOME/vim
 rm -rf ~/.vim/bundle/Vundle.vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 echo "Setting up git..."
 # Git
-ln -sf "${DIR}/.gitconfig" $HOME/.gitconfig
+ln -sF "${DIR}/.gitconfig" $HOME/.gitconfig
 
 echo "Setting up user profile..."
 # Profile
-ln -sf "${DIR}/.bash_profile" $HOME/.bash_profile
+ln -sF "${DIR}/.bash_profile" $HOME/.bash_profile
 source $HOME/.bash_profile
 
