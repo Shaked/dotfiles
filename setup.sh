@@ -2,8 +2,20 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DIR_FUNCS=./funcs
 
 # brew installations 
+brew update
+brew upgrade
+brew tap josegonzalez/php
 brew install mackup
 brew install wget
+brew install mercurial
+brew install mysql
+brew install php53 --with-fpm
+brew install php54 --with-fpm
+brew install php55 --with-fpm
+brew install phpunit
+
+# mysql 
+ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 
 # mackup
 ln -sf "${DIR}/.mackup" $HOME/.mackup 
@@ -12,7 +24,7 @@ mackup restore
 
 
 # Functions 
-echo "Setting up custom functions..."
+echo "Setting up custom functions..."	
 ln -sf "${DIR}/funcs" $HOME/funcs
 ln -sf "${DIR}/.profile" $HOME/.profile
 
