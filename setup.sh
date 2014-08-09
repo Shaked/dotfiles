@@ -10,8 +10,8 @@ brew install wget
 brew install mercurial
 brew install mysql
 brew install php53 --with-fpm
-brew install php54 --with-fpm
-brew install php55 --with-fpm
+brew install php54 --with-fpm --without-ldap
+brew install php55 --with-fpm --without-ldap
 brew install phpunit
 
 # mysql 
