@@ -21,6 +21,9 @@ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 ln -sf $HOME/Google\ Drive/Mackup/.mackup.cfg $HOME/
 mackup restore
 
+# sounds 
+sudo mv /System/Library/Sounds/Funk.aiff /System/Library/Sounds/Funk.aiff.old
+sudo cp $DIR/sounds/Funk.aiff /System/Library/Sounds/Funk.aiff
 
 # Functions 
 echo "Setting up custom functions..."
