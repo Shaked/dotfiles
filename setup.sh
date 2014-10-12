@@ -25,6 +25,9 @@ mackup restore
 sudo mv /System/Library/Sounds/Funk.aiff /System/Library/Sounds/Funk.aiff.old
 sudo cp $DIR/sounds/Funk.aiff /System/Library/Sounds/Funk.aiff
 
+# sublime lik
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+
 # Functions 
 echo "Setting up custom functions..."
 ln -sfF "${DIR}/funcs/" $HOME/funcs
