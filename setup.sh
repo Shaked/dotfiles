@@ -12,6 +12,8 @@ brew install mysql
 brew install php53 --with-fpm
 brew install php54 --with-fpm --without-ldap
 brew install php55 --with-fpm --without-ldap
+brew install php56 --with-fpm --without-ldap
+brew link --overwrite php56
 brew install phpunit
 
 # mysql 
