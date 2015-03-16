@@ -1,1 +1,1 @@
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=$GOPATH/bin:/usr/local/sbin:/usr/local/bin:/usr/local/lib/node_modules/:$PATH:/Users/Shaked/Downloads/go_appengine:/Users/Shaked/bin

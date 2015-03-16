@@ -15,6 +15,25 @@ brew install php55 --with-fpm --without-ldap
 brew install php56 --with-fpm --without-ldap
 brew link --overwrite php56
 brew install phpunit
+# http://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
+brew tap caskroom/cask
+brew install brew-cask
+brew update && brew upgrade brew-cask && brew cleanup
+brew cask install google-chrome
+brew cask install alfred
+brew cask install dropbox
+brew cask install google-drive
+brew cask install sublime-text
+brew cask install transmission
+brew cask install vlc
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install quicklook-csv
+brew cask install betterzipql
+brew cask install qlimagesize
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vagrant-manager
 
 # mysql 
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
