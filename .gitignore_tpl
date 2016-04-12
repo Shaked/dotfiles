@@ -3,6 +3,6 @@
 *.iml
 *.ipr
 .rsync_exclude_remote
-.gitconfig*
+.gitconfig_tpl
 .DS_Store
 *~
