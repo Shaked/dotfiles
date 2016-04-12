@@ -1,26 +1,25 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DIR_FUNCS=./funcs
 
-# brew installations 
+# brew installations
 brew update
 brew upgrade
-brew tap josegonzalez/php
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap homebrew/homebrew-php
 brew install mackup
 brew install wget
 brew install mercurial
 brew install mysql
-brew install php53 --with-fpm
-brew install php54 --with-fpm --without-ldap
-brew install php55 --with-fpm --without-ldap
-brew install php56 --with-fpm --without-ldap
-brew link --overwrite php56
+brew install php56
+brew install php70
+brew link --overwrite php70
 brew install phpunit
 # http://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
 brew tap caskroom/cask
 brew install brew-cask
 brew update && brew upgrade brew-cask && brew cleanup
 brew cask install google-chrome
-brew cask install alfred
 brew cask install dropbox
 brew cask install google-drive
 brew cask install sublime-text
@@ -35,24 +34,25 @@ brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
 
-# mysql 
+# mysql
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 
 # mackup
 ln -sf $HOME/Google\ Drive/Mackup/.mackup.cfg $HOME/
 mackup restore
 
-# sounds 
+# sounds
 sudo mv /System/Library/Sounds/Funk.aiff /System/Library/Sounds/Funk.aiff.old
 sudo cp $DIR/sounds/Funk.aiff /System/Library/Sounds/Funk.aiff
 
 # sublime lik
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
 
-# Functions 
+# Functions
 echo "Setting up custom functions..."
 ln -sfF "${DIR}/funcs/" $HOME/funcs
-ln -sfF "${DIR}/.profile/" $HOME/.profile
+ln -sfF "${DIR}/.profile/" $HOME/
+touch $HOME/.bash_local
 
 # Vim
 echo "Setting up vim..."
@@ -65,6 +65,12 @@ vim +PluginInstall +qall
 echo "Setting up git..."
 # Git
 ln -sf "${DIR}/.gitconfig" $HOME/.gitconfig
+ln -sf "${DIR}/.gitignore_tpl" $HOME/.gitignore
+
+echo "Setting up projects folder"
+HOME_PROJECTS=$HOME/Projects/Home
+mkdir -p $HOME_PROJECTS
+echo "klein.shaked@gmail.com" > $HOME_PROJECTS
 
 echo "Setting up user profile..."
 # Profile

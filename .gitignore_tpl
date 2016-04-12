@@ -1,0 +1,8 @@
+.phpintel/
+.gitconfig
+*.iml
+*.ipr
+.rsync_exclude_remote
+.gitconfig*
+.DS_Store
+*~

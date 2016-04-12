@@ -1,0 +1,15 @@
+# Git branch in prompt.
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+GRAY="\[\033[1;30m\]"
+RED="\[\033[1;31m\]"
+GREEN="\[\033[1;32m\]"
+BLACK="\[\033[1;38m\]"
+BLUE="\[\033[1;34m\]"
+RESET="\[\033[00m\]"
+
+export PS1="$RED\u$GRAY@$GREEN""mac $BLUE\w$GREEN"'$(parse_git_branch " (%s)")'" $GRAY\$ $RESET"
+if [ -n "$STY" ]; then export PS1="(screen) $PS1"; fi
+if [ -n "$TMUX" ]; then export PS1="(tmux) $PS1"; fi
