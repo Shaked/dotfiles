@@ -7,6 +7,7 @@ brew upgrade
 brew tap homebrew/dupes
 brew tap homebrew/versions
 brew tap homebrew/homebrew-php
+brew install git
 brew install mackup
 brew install wget
 brew install mercurial
