@@ -13,4 +13,4 @@ alias g=git
 
 
 alias git-sush='git stash && git pull && git push && git stash pop'
-alias git-change-all-history='git filter-branch --env-filter GIT_AUTHOR_EMAIL="$1"'
+alias git-change-all-history='git filter-branch --env-filter GIT_AUTHOR_EMAIL="$1" GIT_AUTHOR_NAME="$2"'
