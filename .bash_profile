@@ -20,8 +20,9 @@ test -f $LOCALFILE && source $LOCALFILE
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# php
+# aliases
 alias phplint='find . -name "*.php" -exec php -l {} \; | grep "Parse error"'
+alias tail='colortail -k ~/.colortail/conf.default '
 
 # defaults
 export EDITOR=`which vim`

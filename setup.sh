@@ -72,6 +72,8 @@ HOME_PROJECTS=$HOME/Projects/Home
 mkdir -p $HOME_PROJECTS
 echo "klein.shaked@gmail.com" > $HOME_PROJECTS
 
+ln -sfF "${DIR}/.colortail/" $HOME/
+
 echo "Setting up user profile..."
 # Profile
 ln -sf "${DIR}/.bash_profile" $HOME/.bash_profile
