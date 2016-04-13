@@ -1,8 +1,13 @@
 [include]
   path = ~/.gitconfig.private
 [alias]
-	lol = log --graph --decorate --pretty=format:'%C(auto) %h %D %s - author: %Cblue %an' --abbrev-commit
+	#BASED on http://blog.kfish.org/2010/04/git-lola.html
+ 	lol = log --graph --decorate --pretty=format:'%C(auto) %h %D %s - author: %Cblue %an' --abbrev-commit
     lola = log --graph --decorate --pretty=format:'%C(auto) %h %D %s - author: %Cblue %an' --abbrev-commit --all
+    #credit to on https://plus.google.com/u/0/107195974066798722742
+    logm = log --decorate=short --pretty=format:'%C(yellow) %h %C(blue) %s %C(reset)(%C(red)by %cN %C(green)on %cD%C(reset))' --merges
+    logg = log --decorate=short --pretty=format:'%C(yellow) %h %C(blue) %s %C(reset)(%C(red)by %cN %C(green)on %cD%C(reset))' --graph
+    find = "!f() { git log --stat -G $1 --since=1.month  --pretty=format:'%C(auto) %h %D %s - author: %Cblue %an' --abbrev-commit; }; f"
 	st = status
 	ci = commit
 	co = checkout
@@ -10,10 +15,22 @@
 	last = log -1 HEAD
 	unstage = reset HEAD --
 [push]
-	default = matching
+	default = simple
 [core]
 	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore
+	autocrlf = false
+	eol = lf
 [color]
 	ui = true
+	branch = auto
+	diff = auto
+	interactive = auto
+    status = auto
+
+[pull]
+	rebase = true
+[branch]
+	autosetuprebase = always
 [user]
-	name = Shaked Klein Orbach - RG
+	name = Shaked Klein Orbach
