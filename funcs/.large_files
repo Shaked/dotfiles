@@ -1,0 +1,3 @@
+function large_files {
+  sudo find -x / -type f -size +$1M
+}

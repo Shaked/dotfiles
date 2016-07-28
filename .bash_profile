@@ -23,6 +23,8 @@ export LANG=en_US.UTF-8
 # aliases
 alias phplint='find . -name "*.php" -exec php -l {} \; | grep "Parse error"'
 alias tail='colortail -k ~/.colortail/conf.default '
+alias ogc='open -a Google\ Chrome $1'
+
 
 # defaults
 export EDITOR=`which vim`
