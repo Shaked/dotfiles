@@ -1,4 +1,18 @@
-export PATH=$GOPATH/bin:/usr/local/sbin:/usr/local/bin:/usr/local/lib/node_modules/:$PATH:/Users/klein/bin:/Users/klein/.composer/vendor/bin/:/usr/local/mongodb/bin/:/usr/local/Cellar/php70/7.0.3/bin/
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+
+# NPM
+export PATH=/usr/local/lib/node_modules/:$PATH
+# MongoDB
+export PATH=/usr/local/mongodb/bin/:$PATH
+
+# PHP
+export PATH=/usr/local/Cellar/php70/7.0.3/bin/:$PATH
+
+# JAVA
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home
 export JAVA_HOME
 export PATH=$PATH:$JAVA_HOME/bin
+
+# Golang
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=$HOME/.go

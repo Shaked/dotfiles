@@ -16,6 +16,9 @@ brew install php56
 brew install php70
 brew link --overwrite php70
 brew install phpunit
+brew install go
+mkdir $HOME/.go
+
 # http://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
 brew tap caskroom/cask
 brew install brew-cask
@@ -53,7 +56,7 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 echo "Setting up custom functions..."
 ln -sfF "${DIR}/funcs/" $HOME/funcs
 ln -sfF "${DIR}/.profile/" $HOME/
-touch $HOME/.bash_local
+cp "${DIR}/.bash_local_template" $HOME/.bash_local
 
 # Vim
 echo "Setting up vim..."
