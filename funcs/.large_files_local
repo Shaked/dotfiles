@@ -1,0 +1,3 @@
+function large_files_local {
+  du -sh ./*
+}

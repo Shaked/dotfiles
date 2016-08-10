@@ -6,3 +6,4 @@
 .gitconfig_tpl
 .DS_Store
 *~
+.idea/
