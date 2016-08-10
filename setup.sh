@@ -17,7 +17,8 @@ brew install php70
 brew link --overwrite php70
 brew install phpunit
 brew install go
-mkdir $HOME/.go
+GO_VERSION=`brew list --versions go | sed 's/go //'`
+mkdir $HOME/.go/$GO_VERSION
 
 # http://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
 brew tap caskroom/cask

@@ -14,5 +14,7 @@ export JAVA_HOME
 export PATH=$PATH:$JAVA_HOME/bin
 
 # Golang
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export GOPATH=$HOME/.go
+GO_VERSION=`brew list --versions go | sed 's/go //'`
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$HOME/.go/$GO_VERSION/bin
+export GOPATH=$HOME/.go/$GO_VERSION
+export GOROOT=/usr/local/opt/go/libexec/
