@@ -59,6 +59,9 @@ ln -sfF "${DIR}/funcs/" $HOME/funcs
 ln -sfF "${DIR}/.profile/" $HOME/
 cp "${DIR}/.bash_local_template" $HOME/.bash_local
 
+# Go
+go get golang.org/x/tools/cmd/goimports
+
 # Vim
 echo "Setting up vim..."
 ln -sf "${DIR}/.vimrc" $HOME/.vimrc
